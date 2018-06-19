@@ -1,7 +1,7 @@
 # DebuggingPerformance
 
 <p align="center">
-<img src="../Image/screenshot-instruments.png" width="700">
+<img src="https://github.com/shoheiyokoyama/DebuggingPerformance/blob/master/Image/screenshot-instruments.png" width="800">
 </p>
 
 Demo for debugging performance.
