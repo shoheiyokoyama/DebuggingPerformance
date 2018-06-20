@@ -36,13 +36,13 @@ final class ImageTableViewCell: UITableViewCell {
         downloder.download(url: url) { [weak self] image, byteString in
             DispatchQueue.main.async {
                 self?.contentImageView.image = image
-
-                os_signpost(type: .end,
-                            log: OSLog.fetchResource,
-                            name: "download",
-                            signpostID: signpostID,
-                            "byteString: %{size}s", byteString)
             }
+
+            os_signpost(type: .end,
+                        log: OSLog.fetchResource,
+                        name: "download",
+                        signpostID: signpostID,
+                        "byte: %s", byteString)
         }
     }
 }
