@@ -24,6 +24,6 @@ final class PhotoViewController: UIViewController {
         super.viewDidLoad()
 
         title = "Photo"
-        os_signpost(type: .event, log: OSLog.pointsOfInterest, name: "PhotoViewController: viewDidLoad")
+        os_signpost(.event, log: OSLog.pointsOfInterest, name: "PhotoViewController: viewDidLoad")
     }
 }

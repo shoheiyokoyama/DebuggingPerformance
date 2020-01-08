@@ -27,22 +27,26 @@ final class ImageTableViewCell: UITableViewCell {
     func configure(with url: URL, at indexPath: IndexPath) {
 
         let signpostID = OSSignpostID(log: OSLog.fetchResource)
-        os_signpost(type: .begin,
-                    log: OSLog.fetchResource,
-                    name: "download",
-                    signpostID: signpostID,
-                    "url: %s, indexPath.row: %d", url.absoluteString, indexPath.row)
+        os_signpost(
+            .begin,
+            log: OSLog.fetchResource,
+            name: "download",
+            signpostID: signpostID,
+            "url: %s, indexPath.row: %d", url.absoluteString, indexPath.row
+        )
 
         downloder.download(url: url) { [weak self] image, byteString in
             DispatchQueue.main.async {
                 self?.contentImageView.image = image
             }
 
-            os_signpost(type: .end,
-                        log: OSLog.fetchResource,
-                        name: "download",
-                        signpostID: signpostID,
-                        "byte: %s", byteString)
+            os_signpost(
+                .end,
+                log: OSLog.fetchResource,
+                name: "download",
+                signpostID: signpostID,
+                "byte: %s", byteString
+            )
         }
     }
 }

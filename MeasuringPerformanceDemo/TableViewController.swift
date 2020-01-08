@@ -11,7 +11,7 @@ final class TableViewController: UITableViewController {
 
         title = "Photo list"
 
-        os_signpost(type: .event, log: OSLog.pointsOfInterest, name: "LisTableViewControllertVC: viewDidLoad")
+        os_signpost(.event, log: OSLog.pointsOfInterest, name: "LisTableViewControllertVC: viewDidLoad")
     }
 
     // MARK: - Table view data source
