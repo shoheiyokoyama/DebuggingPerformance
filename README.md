@@ -19,7 +19,7 @@ Demo for debugging performance.
 
 ## Requirements
 
-- Xcode 10.0 beta
+- Xcode 11.3
 
 ## Author
 
